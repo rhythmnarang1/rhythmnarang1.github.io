@@ -26,3 +26,65 @@
   height: 100px;
   border-radius: 50%;
 }
+/* style.css */
+body.dark-mode {
+  background-color: #302e2e;
+  color: #ffffff;
+}
+/* General styles */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
+/* Toggle button styles */
+.dark-mode-toggle {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+.dark-mode-toggle .icon {
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle .icon {
+  transform: rotate(180deg);
+}
+
+/* Switch transition */
+.dark-mode-toggle::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #000000;
+  border-radius: 50%;
+  transition: left 0.5s ease, background-color 0.5s ease;
+}
+
+body.dark-mode .dark-mode-toggle::after {
+  left: calc(100% - 26px);
+  background-color: #ffffff;
+}
+
+

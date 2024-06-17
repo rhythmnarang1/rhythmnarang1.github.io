@@ -29,6 +29,14 @@
 </style>
 
 <body>
+  <button id="darkModeToggle" class="dark-mode-toggle">
+    <span class="icon">.</span>
+  </button>
+  
+  
+  
+  
+  <script src="script.js"></script>
 
 
   <!-- Title -->
@@ -40,6 +48,7 @@
           <img src="https://imagedelivery.net/lCsODh8EJUNDijZLbbcSWQ/94e21975-d36d-4e29-f449-ede66a97fa00/public" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="200" 
             loading="lazy">
         </div>
+        
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Meet people of your age nearby </h1>
 
@@ -63,6 +72,7 @@
   </section>
   <!-- Features -->
   <section id="features">
+    
     <div class="container mt-5">
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex align-items-start">
@@ -134,7 +144,7 @@
             
             <div class="col-lg-3 col-sm-12" >
               <img src="https://images.unsplash.com/photo-1612846213933-916a1f56d859?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwdGVhfGVufDB8fDB8fHww"  height="200" width="200"> <p>
-              <button class="button" >Have Tea </button>
+              <button class="button" >Have Tea and some chit-chat</button>
               
             </div>
             <div class="col-lg-3 col-sm-12">
@@ -216,8 +226,45 @@
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
         <div class="col mb-3">
 
-          <p class="text-body-secondary">© RhythmNarang</p>
+          
         </div>
+
+        <section id="contact-form">
+          <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="sendEmail(event)">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="formResponse" class="mt-3"></div>
+          </div>
+        </section>
+        <script>
+          function sendEmail(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+      
+            const subject = encodeURIComponent('Contact Us Form Submission');
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      
+            window.location.href = `mailto:narangrhytm.nr@gmail.com?subject=${subject}&body=${body}`;
+          }
+        </script>
+      
+    
 
         <div class="col mb-3">
 
@@ -244,20 +291,12 @@
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
           </ul>
         </div>
-
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
+        <p class="text-body-secondary">© RhythmNarang</p>
+ 
       </footer>
     </div>
   </section>
+  
 </body>
 
 </html>
