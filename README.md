@@ -1,7 +1,9 @@
 SeniorSync
+
 SeniorSync is a web application designed to connect seniors aged 55 and above, helping them meet like-minded individuals in their local area. Whether it's finding companions for activities, engaging in conversations, or simply combating solitude, SeniorSync aims to provide a platform for seniors to socialize and thrive.
 
-Features
+FEATURES
+
 User-Friendly Interface: Easy-to-use design ensures seamless navigation for seniors.
 
 Age Specific: Exclusively for individuals aged 55 and above, fostering a community tailored to their needs.
