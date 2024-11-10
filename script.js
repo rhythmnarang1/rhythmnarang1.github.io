@@ -35,8 +35,4 @@ document.addEventListener('DOMContentLoaded', function() {
       form.reset();
     });
   });
-  document.getElementById('darkModeToggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.querySelector('.icon').textContent = document.body.classList.contains('dark-mode') ? '🌜' : '🌞';
-  });
   
