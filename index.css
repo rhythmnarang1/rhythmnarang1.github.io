@@ -134,6 +134,17 @@
   background-color: #3473d1;
   border: none;
 }
+.nav-link {
+    color: #6c757d; 
+    font-size: 1.2rem; 
+    transition: color 0.3s ease, font-size 0.3s ease; 
+ }
+
+  /* Hover effect */
+ .nav-link:hover {
+    color: #ff4c68; 
+    font-size: 1.3rem;
+ }
 
 
 
