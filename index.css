@@ -1,90 +1,141 @@
 .gradient-background {
-  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
+  
+  .profile-img {
+    height: 100px;
+    border-radius: 50%;
+  }
+  /* style.css */
+  body.dark-mode {
+    background-color: #302e2e;
+    color: #ffffff;
+  }
+  /* General styles */
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  
+  
+  /* Toggle button styles */
+  .dark-mode-toggle {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.5s ease, border 0.5s ease;
+  }
+  
+  .dark-mode-toggle .icon {
+    font-size: 1.2rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .dark-mode-toggle:hover {
+    background-color: #f0f0f0;
+  }
+  
+  body.dark-mode .dark-mode-toggle {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+  }
+  
+  body.dark-mode .dark-mode-toggle .icon {
+    transform: rotate(180deg);
+  }
+  
+  /* Switch transition */
+  .dark-mode-toggle::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: left 0.5s ease, background-color 0.5s ease;
+  }
+  
+  body.dark-mode .dark-mode-toggle::after {
+    left: calc(100% - 26px);
+    background-color: #ffffff;
+  }
+  .button{
+    
+    background-color: lightgray;
+    
+    border-radius:10%;
+    border: 2px rgb(33, 33, 33);
+    transition-duration:0.4s;
+    height:50px;
+    width:200px;
+    text-decoration: solid;
+    font-style: normal;
+    
+  }
+  .button:hover{
+    color:#f81313 ;
+  }
+
+  body {
+  font-family: Arial, sans-serif;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.navbar {
+  background-color: #f8f9fa;
 }
 
-.icon-square {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
+.accordion-button {
+  background-color: #e9ecef;
+  color: #495057;
 }
 
-.profile-img {
-  height: 100px;
-  border-radius: 50%;
-}
-/* style.css */
-body.dark-mode {
-  background-color: #302e2e;
+.accordion-button:not(.collapsed) {
   color: #ffffff;
-}
-/* General styles */
-body {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #0d6efd;
 }
 
-
-
-/* Toggle button styles */
-.dark-mode-toggle {
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 30px;
-  width: 60px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.5s ease, border 0.5s ease;
+.accordion-body {
+  background-color: #f8f9fa;
+  color: #6c757d;
 }
 
-.dark-mode-toggle .icon {
-  font-size: 1.2rem;
-  transition: transform 0.5s ease;
+.container h2 {
+  color: #343a40;
 }
 
-.dark-mode-toggle:hover {
-  background-color: #f0f0f0;
+.btn-primary {
+  background-color: #3473d1;
+  border: none;
 }
 
-body.dark-mode .dark-mode-toggle {
-  background-color: #000000;
-  border: 2px solid #ffffff;
-}
 
-body.dark-mode .dark-mode-toggle .icon {
-  transform: rotate(180deg);
-}
 
-/* Switch transition */
-.dark-mode-toggle::after {
-  content: '';
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background-color: #000000;
-  border-radius: 50%;
-  transition: left 0.5s ease, background-color 0.5s ease;
-}
-
-body.dark-mode .dark-mode-toggle::after {
-  left: calc(100% - 26px);
-  background-color: #ffffff;
-}
 
 
